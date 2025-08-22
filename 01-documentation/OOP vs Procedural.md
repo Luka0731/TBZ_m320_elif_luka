@@ -20,7 +20,7 @@
 
 ## Checkpoint
 - Ich kann den Unterschied zwischen prozeduraler und objektorientierter Programmierung erklären  
-Beide sind verschiede Programmierparadigmen. In der Prozedurale Programmierung wir der Code Schritt-für-Schritt durgeführt. In der opjektorientierten Programmierung (auch bekannt als OOP) den Code sozusagen als Dinge darzustellen. Dies ist verständlicher für den Programmierer. Dise Dinge können dann Zustände und Verhalten in sich speichern.
+> Beide sind verschiede Programmierparadigmen. In der Prozedurale Programmierung wir der Code Schritt-für-Schritt durgeführt. In der opjektorientierten Programmierung (auch bekannt als OOP) den Code sozusagen als Dinge darzustellen. Dies ist verständlicher für den Programmierer. Dise Dinge können dann Zustände und Verhalten in sich speichern.
 
 - Ich kenne den Begriff Programmierparadigma und kann ihn mit einem Beispiel erläutern  
-Programmierparadigmen bezeichnen unterschiedliche Prinzipien, mit denen die Ausführung von Programmen beschrieben wir.
+> Programmierparadigmen bezeichnen unterschiedliche Prinzipien, mit denen die Ausführung von Programmen beschrieben wir.

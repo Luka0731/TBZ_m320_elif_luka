@@ -1,0 +1,43 @@
+----------------------------------------------------------------------
+SEND E-MAIL
+---
+I have to respond to the client
+Status: not started
+Priority: high
+Due Date: 2007-12-31
+----------------------------------------------------------------------
+EXECUTE THE CONTROL
+---
+Check my Programm for coding errors
+Status: not started
+Priority: medium
+Due Date: 2006-12-31
+----------------------------------------------------------------------
+DO PROGRAMM
+---
+Finish the Programm I'm working on
+Status: not started
+Priority: medium
+Due Date: 2007-12-01
+----------------------------------------------------------------------
+TALK TO BOBBY
+---
+We need to discuss the new programm, that we are implementing
+Status: not started
+Priority: medium
+Due Date: 2007-12-31
+----------------------------------------------------------------------
+CLEAN FLOOR
+---
+I have to clean the floor at Tim's place
+Status: not started
+Priority: low
+Due Date: 2007-12-31
+----------------------------------------------------------------------
+CLEAN FLOOR
+---
+I have to clean the floor at Alisha's kitchen
+Status: not started
+Priority: low
+Due Date: 2007-12-31
+----------------------------------------------------------------------

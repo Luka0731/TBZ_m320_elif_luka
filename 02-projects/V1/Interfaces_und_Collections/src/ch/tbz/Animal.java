@@ -9,7 +9,7 @@ abstract class Animal implements Comparable<Animal> {
         this.age = age;
     }
 
-    abstract public String speak();
+    public abstract String speak();
 
     public String getName() {
         return name;

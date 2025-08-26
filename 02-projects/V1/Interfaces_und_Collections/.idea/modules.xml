@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/heating-system.iml" filepath="$PROJECT_DIR$/heating-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Interfaces_und_Collections.iml" filepath="$PROJECT_DIR$/Interfaces_und_Collections.iml" />
     </modules>
   </component>
 </project>

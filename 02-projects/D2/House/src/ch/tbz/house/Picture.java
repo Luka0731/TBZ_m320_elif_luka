@@ -1,6 +1,6 @@
-package ch.tbz.House;
+package ch.tbz.house;
 
-import ch.tbz.House.shapes.*;
+import ch.tbz.house.shapes.*;
 
 /**
  * This class represents a simple picture. You can draw the picture using

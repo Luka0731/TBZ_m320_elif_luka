@@ -1,4 +1,4 @@
-package ch.tbz.House.shapes;
+package ch.tbz.house.shapes;
 
 public class Cloud {
     private final Circle[] circles = new Circle[3];

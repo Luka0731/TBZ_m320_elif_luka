@@ -1,47 +1,38 @@
-package ch.tbz.House.shapes;
+package ch.tbz.house.shapes;
 
-import ch.tbz.House.Canvas;
+import ch.tbz.house.Canvas;
 
 import java.awt.*;
 
 /**
- * A triangle that can be manipulated and that draws itself on a canvas.
+ * A square that can be manipulated and that draws itself on a canvas.
  * 
  * @author  Michael K�lling and David J. Barnes
  * @version 2011.07.31
  */
 
-public class Triangle
+public class Square
 {
-    private int height;
-    private int width;
+    private int size;
     private int xPosition;
     private int yPosition;
     private String color;
     private boolean isVisible;
 
     /**
-     * Create a new triangle at default position with default color.
+     * Create a new square at default position with default color.
      */
-    public Triangle()
+    public Square()
     {
-        height = 60;
-        width = 70;
-        xPosition = 210;
-        yPosition = 140;
-        color = "green";
-    }
-
-    public Triangle(int height, int width, int xPosition, int yPosition, String color) {
-        this.height = height;
-        this.width = width;
-        this.xPosition = xPosition;
-        this.yPosition = yPosition;
-        this.color = color;
+        size = 60;
+        xPosition = 310;
+        yPosition = 120;
+        color = "red";
+        isVisible = false;
     }
 
     /**
-     * Make this triangle visible. If it was already visible, do nothing.
+     * Make this square visible. If it was already visible, do nothing.
      */
     public void makeVisible()
     {
@@ -50,7 +41,7 @@ public class Triangle
     }
     
     /**
-     * Make this triangle invisible. If it was already invisible, do nothing.
+     * Make this square invisible. If it was already invisible, do nothing.
      */
     public void makeInvisible()
     {
@@ -59,7 +50,7 @@ public class Triangle
     }
     
     /**
-     * Move the triangle a few pixels to the right.
+     * Move the square a few pixels to the right.
      */
     public void moveRight()
     {
@@ -67,7 +58,7 @@ public class Triangle
     }
 
     /**
-     * Move the triangle a few pixels to the left.
+     * Move the square a few pixels to the left.
      */
     public void moveLeft()
     {
@@ -75,7 +66,7 @@ public class Triangle
     }
 
     /**
-     * Move the triangle a few pixels up.
+     * Move the square a few pixels up.
      */
     public void moveUp()
     {
@@ -83,7 +74,7 @@ public class Triangle
     }
 
     /**
-     * Move the triangle a few pixels down.
+     * Move the square a few pixels down.
      */
     public void moveDown()
     {
@@ -91,7 +82,7 @@ public class Triangle
     }
 
     /**
-     * Move the triangle horizontally by 'distance' pixels.
+     * Move the square horizontally by 'distance' pixels.
      */
     public void moveHorizontal(int distance)
     {
@@ -101,7 +92,7 @@ public class Triangle
     }
 
     /**
-     * Move the triangle vertically by 'distance' pixels.
+     * Move the square vertically by 'distance' pixels.
      */
     public void moveVertical(int distance)
     {
@@ -111,7 +102,7 @@ public class Triangle
     }
 
     /**
-     * Slowly move the triangle horizontally by 'distance' pixels.
+     * Slowly move the square horizontally by 'distance' pixels.
      */
     public void slowMoveHorizontal(int distance)
     {
@@ -135,7 +126,7 @@ public class Triangle
     }
 
     /**
-     * Slowly move the triangle vertically by 'distance' pixels.
+     * Slowly move the square vertically by 'distance' pixels.
      */
     public void slowMoveVertical(int distance)
     {
@@ -161,11 +152,10 @@ public class Triangle
     /**
      * Change the size to the new size (in pixels). Size must be >= 0.
      */
-    public void changeSize(int newHeight, int newWidth)
+    public void changeSize(int newSize)
     {
         erase();
-        height = newHeight;
-        width = newWidth;
+        size = newSize;
         draw();
     }
 
@@ -180,26 +170,25 @@ public class Triangle
     }
 
     /**
-     * Draw the triangle with current specifications on screen.
+     * Draw the square with current specifications on screen.
      */
     private void draw()
     {
         if(isVisible) {
-            ch.tbz.House.Canvas canvas = ch.tbz.House.Canvas.getCanvas();
-            int[] xpoints = { xPosition, xPosition + (width/2), xPosition - (width/2) };
-            int[] ypoints = { yPosition, yPosition + height, yPosition + height };
-            canvas.draw(this, color, new Polygon(xpoints, ypoints, 3));
+            ch.tbz.house.Canvas canvas = ch.tbz.house.Canvas.getCanvas();
+            canvas.draw(this, color,
+                        new Rectangle(xPosition, yPosition, size, size));
             canvas.wait(10);
         }
     }
 
     /**
-     * Erase the triangle on screen.
+     * Erase the square on screen.
      */
     private void erase()
     {
         if(isVisible) {
-            ch.tbz.House.Canvas canvas = Canvas.getCanvas();
+            ch.tbz.house.Canvas canvas = Canvas.getCanvas();
             canvas.erase(this);
         }
     }

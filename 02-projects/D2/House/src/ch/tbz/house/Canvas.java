@@ -1,4 +1,4 @@
-package ch.tbz.House;
+package ch.tbz.house;
 
 import javax.swing.*;
 import java.awt.*;
@@ -120,7 +120,7 @@ public class Canvas
 
     /**
      * Set the foreground color of the Canvas.
-     * @param  newColor   the new color for the foreground of the Canvas 
+     * @param newColor the new color for the foreground of the Canvas
      */
     public void setForegroundColor(String colorString)
     {

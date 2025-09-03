@@ -1,4 +1,4 @@
-package ch.tbz.House;
+package ch.tbz.house;
 
 public class Main {
 

@@ -12,10 +12,10 @@ public class App {
 
     public static void main(String[] args) {
 
-        BudgetRepository repo = new FileBudgetRepository(Path.of("budgetbuddy-data.json"));
+        BudgetRepository budgetRepository = new FileBudgetRepository(Path.of("budgetbuddy-data.json"));
 
-        BudgetService budgetService = new BudgetService(repo);
-        ReportingService reportingService = new ReportingService();
+        BudgetService budgetService = new BudgetService(budgetRepository);
+        ReportingService reportingService = new ReportingService(budgetService);
 
         Client client = new Client(budgetService, reportingService);
         client.run();

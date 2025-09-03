@@ -1,7 +1,5 @@
 package ch.tbz.budgedbuddy.exception;
 
 public class BudgetExceededException extends RuntimeException {
-    public BudgetExceededException(String message) {
-        super(message);
-    }
+    public BudgetExceededException(String message) { super(message); }
 }

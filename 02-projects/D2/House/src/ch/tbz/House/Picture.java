@@ -1,5 +1,7 @@
 package ch.tbz.House;
 
+import ch.tbz.House.shapes.*;
+
 /**
  * This class represents a simple picture. You can draw the picture using
  * the draw method. But wait, there's more: being an electronic picture, it
@@ -17,6 +19,8 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Cloud cloud;
+    private Person person;
 
     /**
      * Constructor for objects of class Picture
@@ -56,6 +60,16 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
+
+        cloud = new Cloud(60, -80, 20, "blue");
+        cloud.makeVisible();
+        cloud.slowMoveHorizontal(600);
+
+        person = new Person();
+        person.moveHorizontal(300);
+        person.makeVisible();
+        person.slowMoveHorizontal(-300);
+        person.makeInvisible();
     }
 
     /**

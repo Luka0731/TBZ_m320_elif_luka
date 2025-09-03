@@ -1,4 +1,6 @@
-package ch.tbz.House;
+package ch.tbz.House.shapes;
+
+import ch.tbz.House.Canvas;
 
 import java.awt.*;
 
@@ -181,7 +183,7 @@ public class Person
         int x = xPosition;
         int y = yPosition;
         if(isVisible) {
-            Canvas canvas = Canvas.getCanvas();
+            ch.tbz.House.Canvas canvas = ch.tbz.House.Canvas.getCanvas();
             int[] xpoints = { x-3, x-hw, x-hw, x-(int)(hw*0.2)-1, x-(int)(hw*0.2)-1, x-hw, 
                               x-hw+(int)(hw*0.4)+1, x, x+hw-(int)(hw*0.4)-1, x+hw, x+(int)(hw*0.2)+1, 
                               x+(int)(hw*0.2)+1, x+hw, x+hw, x+3, x+(int)(hw*0.6), 
@@ -201,7 +203,7 @@ public class Person
     private void erase()
     {
         if(isVisible) {
-            Canvas canvas = Canvas.getCanvas();
+            ch.tbz.House.Canvas canvas = Canvas.getCanvas();
             canvas.erase(this);
         }
     }

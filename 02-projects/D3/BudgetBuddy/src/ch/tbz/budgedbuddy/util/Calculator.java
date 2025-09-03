@@ -6,6 +6,8 @@ import java.time.YearMonth;
 import java.util.List;
 
 public class Calculator {
+    private Calculator() {}
+
     public static Money sum(List<Expense> expenses) {
         int total = 0;
         for (Expense e : expenses) total += e.getAmount().getCents();

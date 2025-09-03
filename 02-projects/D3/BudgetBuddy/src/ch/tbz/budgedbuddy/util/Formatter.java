@@ -7,6 +7,8 @@ import ch.tbz.budgedbuddy.domain.Money;
 import java.util.List;
 
 public class Formatter {
+    private Formatter() {}
+
     public static String formatCategories(List<Category> categoryList) {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Kategorien:\n");

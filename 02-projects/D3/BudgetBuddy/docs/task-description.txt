@@ -1,0 +1,37 @@
+/////////////////////////////////////////////
+|     Projektbeschreibung – BudgetBuddy     |
+/////////////////////////////////////////////
+
+BudgetBuddy ist eine kleine Konsolen-Anwendung, mit der Benutzer ihre monatlichen Ausgaben im Blick behalten können.
+Die Anwendung erlaubt es, Kategorien mit einem Budgetlimit anzulegen (z. B. Essen, Freizeit, Transport) und Ausgaben
+in diesen Kategorien zu erfassen.
+Über Befehle können alle Kategorien und Ausgaben aufgelistet sowie Monatsübersichten (Summaries) angezeigt werden.
+
+
+Wichtige Merkmale:
+=================
+* Delegation:
+  ---
+  Die Benutzeroberfläche (Client) ist klar getrennt von der Fachlogik (BudgetService), der Formatierung (Formatter) und
+  der Persistenz (BudgetRepository). Jede Schicht delegiert Aufgaben an die nächste spezialisierte Komponente.
+
+* Exception Handling:
+  ---
+  Eigene Exceptions wie InvalidCommandException, ParseException, ValidationException oder BudgetExceededException sorgen
+  dafür, dass falsche Eingaben oder fehlerhafte Daten kontrolliert abgefangen werden, ohne dass das Programm abstürzt.
+
+* Datenhaltung:
+  ---
+  Alle Daten (Kategorien, Ausgaben) können in einer Datei gespeichert und wieder geladen werden.
+
+* Konsolenbefehle:
+  ---
+  Befehle wie add-category, add-expense, list-categories, list-expenses und summary ermöglichen eine einfache Bedienung
+  über die Konsole.
+
+
+Lernziele:
+==========
+Dieses Projekt demonstriert den Einsatz von Delegation (HAT-Beziehungen zwischen Klassen, Service-Schicht, Utils)
+sowie den sinnvollen Einsatz eigener Exception-Klassen zur sauberen Fehlerbehandlung. Die Projektbeschreibung wurde
+von KI geschrieben, währenddessen ich, Luka, nun versuche, ohne Hilfe es umzusetzen.

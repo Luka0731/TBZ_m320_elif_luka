@@ -7,15 +7,15 @@ public class HelpCommand implements Command {
     @Override
     public String execute(BudgetService budgetService, ReportingService reportingService) {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("help");
-        stringBuilder.append("add-category <name> <limit>");
-        stringBuilder.append("list-categories");
-        stringBuilder.append("add-expense <category> <amount> <yyyy-MM-dd> [note]");
-        stringBuilder.append("list-expenses [category]");
-        stringBuilder.append("summary [yyyy-MM]");
-        stringBuilder.append("save");
-        stringBuilder.append("load");
-        stringBuilder.append("exit");
+        stringBuilder.append("help\n");
+        stringBuilder.append("add-category <name> <limit>\n");
+        stringBuilder.append("list-categories\n");
+        stringBuilder.append("add-expense <category> <amount> <yyyy-MM-dd> [note]\n");
+        stringBuilder.append("list-expenses [category]\n");
+        stringBuilder.append("summary [yyyy-MM]\n");
+        stringBuilder.append("save\n");
+        stringBuilder.append("load\n");
+        stringBuilder.append("exit\n");
         return stringBuilder.toString();
     }
 }

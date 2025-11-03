@@ -38,7 +38,7 @@ public class Cosmetics {
 
     private boolean vegan;
 
-    private boolean cruelty_free;
+    private boolean crueltyFree;
 
     @NotNull(message = "Volume can't be null.")
     @DecimalMin(value = "0.01", message = "Volume must be greater than 0.")

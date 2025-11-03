@@ -45,11 +45,11 @@ public class CosmeticsService {
     }
 
     public long countByCrueltyFree(boolean crueltyFree) {
-        return cosmeticsRepository.countByCruelty_free(crueltyFree);
+        return cosmeticsRepository.countByCrueltyFree(crueltyFree);
     }
 
     public long countByVegan(boolean vegan) {
-        return cosmeticsRepository.countByVegan_free(vegan);
+        return cosmeticsRepository.countByVegan(vegan);
     }
 
 

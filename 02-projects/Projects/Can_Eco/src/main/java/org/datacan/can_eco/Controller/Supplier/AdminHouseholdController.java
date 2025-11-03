@@ -1,6 +1,7 @@
 package org.datacan.can_eco.Controller.Supplier;
 
 import org.datacan.can_eco.Model.Household;
+import org.datacan.can_eco.Service.Supplier.AdminHouseholdService;
 import org.datacan.can_eco.Service.Supplier.AdminIndustrialService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.UUID;
 public class AdminHouseholdController {
 
     @Autowired
-    private org.datacan.can_eco.Service.Admin.AdminHouseholdService adminHouseholdService;
+    AdminHouseholdService adminHouseholdService;
 
     @PostMapping("/")
     public ResponseEntity<Household> createHousehold(@Valid @RequestBody Household household) {

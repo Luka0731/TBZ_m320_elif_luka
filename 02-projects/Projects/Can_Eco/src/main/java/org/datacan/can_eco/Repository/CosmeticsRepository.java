@@ -16,9 +16,9 @@ public interface CosmeticsRepository extends JpaRepository<Cosmetics, UUID> {
 
     long countByPriceIsBetween(int low, int high);
 
-    long countByCruelty_free(boolean crueltyFree);
+    long countByCrueltyFree(boolean crueltyFree);
 
-    long countByVegan_free(boolean vegan);
+    long countByVegan(boolean vegan);
 
     List<Cosmetics> findByCategory(String category);
 

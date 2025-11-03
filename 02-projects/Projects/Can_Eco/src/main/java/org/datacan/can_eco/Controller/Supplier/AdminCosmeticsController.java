@@ -1,6 +1,7 @@
 package org.datacan.can_eco.Controller.Supplier;
 
 import org.datacan.can_eco.Model.Cosmetics;
+import org.datacan.can_eco.Service.Supplier.AdminCosmeticsService;
 import org.datacan.can_eco.Service.Supplier.AdminIndustrialService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.UUID;
 public class AdminCosmeticsController {
 
     @Autowired
-    private org.datacan.can_eco.Service.Admin.AdminCosmeticsService adminCosmeticsService;
+    AdminCosmeticsService adminCosmeticsService;
 
     @PostMapping("/")
     public ResponseEntity<Cosmetics> createCosmetics(@Valid @RequestBody Cosmetics cosmetics) {

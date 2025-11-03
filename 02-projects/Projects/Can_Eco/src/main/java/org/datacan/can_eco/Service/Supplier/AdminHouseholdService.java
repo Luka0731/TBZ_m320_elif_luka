@@ -1,4 +1,4 @@
-package org.datacan.can_eco.Service.Admin;
+package org.datacan.can_eco.Service.Supplier;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.datacan.can_eco.Model.Household;

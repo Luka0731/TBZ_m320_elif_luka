@@ -2,7 +2,6 @@ package org.datacan.can_eco.Controller.Demander;
 
 import org.datacan.can_eco.Model.Cosmetics;
 import org.datacan.can_eco.Service.Demander.CosmeticsService;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -130,7 +129,7 @@ public class CosmeticsController {
 
         List<Cosmetics> filtered = all.stream()
                 .filter(c -> vegan == null || c.isVegan() == vegan)
-                .filter(c -> crueltyFree == null || c.isCruelty_free() == crueltyFree)
+                .filter(c -> crueltyFree == null || c.isCrueltyFree() == crueltyFree)
                 .filter(c -> category == null || c.getCategory().equalsIgnoreCase(category))
                 .filter(c -> highPrice == null || c.getPrice() <= highPrice)
                 .filter(c -> lowPrice == null || c.getPrice() >= lowPrice)

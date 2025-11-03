@@ -2,7 +2,6 @@ package org.datacan.can_eco.Controller.Demander;
 
 import org.datacan.can_eco.Model.Household;
 import org.datacan.can_eco.Service.Demander.HouseholdService;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

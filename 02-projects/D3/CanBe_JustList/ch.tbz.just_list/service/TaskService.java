@@ -14,7 +14,7 @@ public class TaskService {
 
     public void CreateTask(String title, String description,
                            final String helpful_ressources,
-                           final String category, final String level, Optional<Boolean> ai_check) {
+                           final String category, final String level) {
 
         ParseInput pInput = new ParseInput();
         final String final_title = pInput.ParseInput(title);

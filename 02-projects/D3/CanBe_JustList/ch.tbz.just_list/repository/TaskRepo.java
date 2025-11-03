@@ -3,7 +3,6 @@ package repository;
 import model.Task;
 
 public interface TaskRepo {
-
     public void saveToFile();
     
     public void load();

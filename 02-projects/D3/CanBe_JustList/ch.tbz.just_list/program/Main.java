@@ -1,6 +1,7 @@
 package program;
 
 import ai.ToDoAI;
+import linguistic.ParseInput;
 import service.TaskService;
 
 import java.util.Optional;
@@ -23,7 +24,7 @@ public class Main {
             System.out.println("5) Exit");
 
             String choice = scanner.nextLine();
-
+            ParseInput put = new ParseInput();
             switch (choice) {
                 case "1":
                     System.out.print("Enter task title: ");
@@ -41,6 +42,7 @@ public class Main {
                     System.out.print("Enter level (Easy/Mittel/Hard): ");
                     String level = scanner.nextLine();
 
+service.CreateTask(title, description, resources, category, level);
                     break;
 
                 case "2":

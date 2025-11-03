@@ -1,6 +1,5 @@
 package org.datacan.can_eco.Service.Supplier;
 
-import jakarta.persistence.EntityNotFoundException;
 import org.datacan.can_eco.Exception.NotFound;
 import org.datacan.can_eco.Model.Household;
 import org.datacan.can_eco.Repository.HouseholdRepository;
@@ -34,10 +33,5 @@ public class AdminHouseholdService {
         householdRepository.findById(id)
                 .orElseThrow(() -> new NotFound("There is no Household product with this id!"));
         householdRepository.deleteById(id);
-    }
-
-    public Household getHousehold(UUID id) {
-        return householdRepository.findById(id)
-                .orElseThrow(() -> new NotFound("There is no Household product with this id!"));
     }
 }

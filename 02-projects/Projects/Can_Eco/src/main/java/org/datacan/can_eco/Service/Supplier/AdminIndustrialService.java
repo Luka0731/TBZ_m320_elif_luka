@@ -1,6 +1,5 @@
 package org.datacan.can_eco.Service.Supplier;
 
-import jakarta.persistence.EntityNotFoundException;
 import org.datacan.can_eco.Exception.NotFound;
 import org.datacan.can_eco.Model.Industrial;
 import org.datacan.can_eco.Repository.IndustrialRepository;
@@ -36,8 +35,4 @@ public class AdminIndustrialService {
         industrialRepository.deleteById(id);
     }
 
-    public Industrial getIndustrial(UUID id) {
-        return industrialRepository.findById(id)
-                .orElseThrow(() -> new NotFound("There is no Industrial product with this id!"));
-    }
 }

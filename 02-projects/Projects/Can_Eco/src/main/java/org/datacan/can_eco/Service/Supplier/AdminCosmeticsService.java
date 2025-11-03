@@ -1,6 +1,5 @@
 package org.datacan.can_eco.Service.Supplier;
 
-import jakarta.persistence.EntityNotFoundException;
 import org.datacan.can_eco.Exception.NotFound;
 import org.datacan.can_eco.Model.Cosmetics;
 import org.datacan.can_eco.Repository.CosmeticsRepository;
@@ -36,8 +35,4 @@ public class AdminCosmeticsService {
         cosmeticsRepository.deleteById(id);
     }
 
-    public Cosmetics getCosmetics(UUID id) {
-        return cosmeticsRepository.findById(id)
-                .orElseThrow(() -> new NotFound("There is no Cosmetics product with this id!"));
-    }
 }

@@ -3,7 +3,6 @@ package org.datacan.can_eco.Controller.Supplier;
 import org.datacan.can_eco.Exception.PriceUnsuitable;
 import org.datacan.can_eco.Model.Cosmetics;
 import org.datacan.can_eco.Service.Supplier.AdminCosmeticsService;
-import org.datacan.can_eco.Service.Supplier.AdminIndustrialService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

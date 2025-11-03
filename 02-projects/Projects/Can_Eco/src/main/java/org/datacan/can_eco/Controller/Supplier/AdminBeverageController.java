@@ -1,5 +1,6 @@
 package org.datacan.can_eco.Controller.Supplier;
 
+import org.datacan.can_eco.Exception.PriceUnsuitable;
 import org.datacan.can_eco.Model.Beverage;
 import org.datacan.can_eco.Service.Supplier.AdminBeverageService;
 import jakarta.validation.Valid;
@@ -20,7 +21,7 @@ public class AdminBeverageController {
     @PostMapping("/")
     public ResponseEntity<Beverage> createBeverage(@Valid @RequestBody Beverage beverage) {
         if (beverage.getPrice() < 1) {
-            throw new IllegalArgumentException("Price of the beverage can't be under 1!");
+            throw new PriceUnsuitable("Price of the beverage can't be under 1!");
         }
         return ResponseEntity.ok(adminBeverageService.createBeverage(beverage));
     }

@@ -1,5 +1,6 @@
 package org.datacan.can_eco.Controller.Supplier;
 
+import org.datacan.can_eco.Exception.PriceUnsuitable;
 import org.datacan.can_eco.Model.Industrial;
 import org.datacan.can_eco.Service.Supplier.AdminIndustrialService;
 import jakarta.validation.Valid;
@@ -20,7 +21,7 @@ public class AdminIndustrialController {
     @PostMapping("/")
     public ResponseEntity<Industrial> createIndustrial(@Valid @RequestBody Industrial industrial) {
         if (industrial.getPrice() < 1) {
-            throw new IllegalArgumentException("Price of the industrial product can't be under 1!");
+            throw new PriceUnsuitable("Price of the industrial product can't be under 1!");
         }
         return ResponseEntity.ok(adminIndustrialService.createIndustrial(industrial));
     }

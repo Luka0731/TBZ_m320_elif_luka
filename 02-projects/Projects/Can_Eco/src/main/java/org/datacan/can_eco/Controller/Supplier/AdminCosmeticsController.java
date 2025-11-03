@@ -1,5 +1,6 @@
 package org.datacan.can_eco.Controller.Supplier;
 
+import org.datacan.can_eco.Exception.PriceUnsuitable;
 import org.datacan.can_eco.Model.Cosmetics;
 import org.datacan.can_eco.Service.Supplier.AdminCosmeticsService;
 import org.datacan.can_eco.Service.Supplier.AdminIndustrialService;
@@ -21,7 +22,7 @@ public class AdminCosmeticsController {
     @PostMapping("/")
     public ResponseEntity<Cosmetics> createCosmetics(@Valid @RequestBody Cosmetics cosmetics) {
         if (cosmetics.getPrice() < 1) {
-            throw new IllegalArgumentException("Price of the cosmetics product can't be under 1!");
+            throw new PriceUnsuitable("Price of the cosmetics product can't be under 1!");
         }
         return ResponseEntity.ok(adminCosmeticsService.createCosmetics(cosmetics));
     }

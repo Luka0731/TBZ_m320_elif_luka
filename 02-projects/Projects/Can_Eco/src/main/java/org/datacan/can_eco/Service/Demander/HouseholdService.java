@@ -1,6 +1,7 @@
 package org.datacan.can_eco.Service.Demander;
 
 import jakarta.persistence.EntityNotFoundException;
+import org.datacan.can_eco.Exception.NotFound;
 import org.datacan.can_eco.Model.Household;
 import org.datacan.can_eco.Repository.HouseholdRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class HouseholdService {
 
     public Household getHouseholdById(UUID id) {
         return householdRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Household with id " + id + " not found"));
+                .orElseThrow(() -> new NotFound("Household with id " + id + " not found"));
     }
 
     public long countHousehold() {

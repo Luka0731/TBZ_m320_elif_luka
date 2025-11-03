@@ -1,6 +1,7 @@
 package org.datacan.can_eco.Service.Demander;
 
 import jakarta.persistence.EntityNotFoundException;
+import org.datacan.can_eco.Exception.NotFound;
 import org.datacan.can_eco.Model.Industrial;
 import org.datacan.can_eco.Repository.IndustrialRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class IndustrialService {
 
     public Industrial getIndustrialById(UUID id) {
         return industrialRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Industrial product with id " + id + " not found"));
+                .orElseThrow(() -> new NotFound("Industrial product with id " + id + " not found"));
     }
 
     public long countIndustrial() {

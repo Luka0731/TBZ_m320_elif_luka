@@ -1,6 +1,7 @@
 package org.datacan.can_eco.Service.Demander;
 
 import jakarta.persistence.EntityNotFoundException;
+import org.datacan.can_eco.Exception.NotFound;
 import org.datacan.can_eco.Model.Beverage;
 import org.datacan.can_eco.Repository.BeverageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class BeverageService {
     }
 
     public Beverage getBeverageById(UUID id) {
-        return (Beverage) beverageRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Beverage with id " + id + " not found"));
+        return (Beverage) beverageRepository.findById(id).orElseThrow(() -> new NotFound("Beverage with id " + id + " not found"));
     }
 
     public long countBeverage() {

@@ -1,5 +1,6 @@
 package org.datacan.can_eco.Controller.Supplier;
 
+import org.datacan.can_eco.Exception.PriceUnsuitable;
 import org.datacan.can_eco.Model.Household;
 import org.datacan.can_eco.Service.Supplier.AdminHouseholdService;
 import org.datacan.can_eco.Service.Supplier.AdminIndustrialService;
@@ -21,7 +22,7 @@ public class AdminHouseholdController {
     @PostMapping("/")
     public ResponseEntity<Household> createHousehold(@Valid @RequestBody Household household) {
         if (household.getPrice() < 1) {
-            throw new IllegalArgumentException("Price of the household product can't be under 1!");
+            throw new PriceUnsuitable("Price of the household product can't be under 1!");
         }
         return ResponseEntity.ok(adminHouseholdService.createHousehold(household));
     }

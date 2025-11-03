@@ -1,6 +1,7 @@
 package org.datacan.can_eco.Service.Demander;
 
 import jakarta.persistence.EntityNotFoundException;
+import org.datacan.can_eco.Exception.NotFound;
 import org.datacan.can_eco.Model.Cosmetics;
 import org.datacan.can_eco.Repository.CosmeticsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class CosmeticsService {
 
     public Cosmetics getCosmeticsById(UUID id) {
         return cosmeticsRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Cosmetics with id " + id + " not found"));
+                .orElseThrow(() -> new NotFound("Cosmetics with id " + id + " not found"));
     }
 
     public long countCosmetics() {

@@ -1,11 +1,12 @@
 package org.datacan.can_eco.Repository;
 
+import org.datacan.can_eco.Model.Beverage;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 import java.util.UUID;
 
-public interface BeverageRepository extends JpaRepository<BeverageRepository, UUID> {
+public interface BeverageRepository extends JpaRepository<Beverage, UUID> {
 
 
     long countByAlcoholic(boolean alcoholic);
@@ -17,6 +18,7 @@ public interface BeverageRepository extends JpaRepository<BeverageRepository, UU
     long countByPriceIsGreaterThan(double price);
 
     long countByPriceIsBetween(double low, double high);
+
 
 
     List<BeverageRepository> findByAlcoholic(boolean alcoholic);

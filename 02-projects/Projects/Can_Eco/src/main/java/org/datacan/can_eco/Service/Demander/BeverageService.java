@@ -2,6 +2,7 @@ package org.datacan.can_eco.Service.Demander;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.datacan.can_eco.Exception.NotFound;
+import org.datacan.can_eco.Exception.PriceUnsuitable;
 import org.datacan.can_eco.Model.Beverage;
 import org.datacan.can_eco.Repository.BeverageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,8 +57,8 @@ public class BeverageService {
         return beverageRepository.findByCategory(category);
     }
 
-    public List<BeverageRepository> getAllBeverageByPriceLessThan(double start, double end) {
-        return beverageRepository.findByPriceIsLessThan(start);
+    public List<BeverageRepository> getAllBeverageByPriceLessThan(double end) {
+        return beverageRepository.findByPriceIsLessThan(end);
     }
 
     public List<BeverageRepository> getAllBeverageByPriceGreaterThan(double start, double end) {

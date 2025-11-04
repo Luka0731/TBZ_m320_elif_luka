@@ -53,7 +53,7 @@ public class BeverageController {
     @GetMapping("/price/less")
     public ResponseEntity<?> getByLessPrice(@RequestParam double price) {
         long countLess = beverageService.countByPriceLessThan(price);
-        List<BeverageRepository> lessList = beverageService.getAllBeverageByPriceLessThan(price, price);
+        List<BeverageRepository> lessList = beverageService.getAllBeverageByPriceLessThan(price);
 
         if (countLess <= 0) {
             return new ResponseEntity<>("No beverages in that price range", HttpStatus.NOT_FOUND);
